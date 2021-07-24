@@ -60,7 +60,7 @@ func (s *Service) NewMX(name string) *dns.MX {
 
 // NewA returns a new A record based on the Service.
 func (s *Service) NewA(name string, ip net.IP) *dns.A {
-	return &dns.A{Hdr: dns.RR_Header{Name: name, Rrtype: dns.TypeA, Class: dns.ClassINET, Ttl: s.TTL}, A: ip}
+	return &dns.A{Hdr: dns.RR_Header{Name: name, Rrtype: dns.TypeA, Class: dns.ClassINET, Ttl: 30}, A: ip}
 }
 
 // NewAAAA returns a new AAAA record based on the Service.
